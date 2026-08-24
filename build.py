@@ -32,13 +32,15 @@ PAGES = [
     ("news/article/",                "jby-knowledge-center/article.html"),
     ("news/video/",                  "jby-knowledge-center/video.html"),
     ("news/event/",                  "jby-knowledge-center/event.html"),
+    ("news/search/",                 "jby-knowledge-center/search.html"),
     ("privacy-policy/",              "jby-privacy-policy/"),
     ("terms/",                       "jby-terms-and-conditions/"),
     ("statement-of-information/",    "jby-statement-of-information/"),
 ]
 
-CHROME = ('<link rel="stylesheet" href="/jby-site/site.css">\n'
-          '<script defer src="/jby-site/site.js"></script>\n')
+VERSION = "3"   # bump when site.js / site.css change, so pages pick them up immediately
+CHROME = ('<link rel="stylesheet" href="/jby-site/site.css?v=%s">\n'
+          '<script defer src="/jby-site/site.js?v=%s"></script>\n' % (VERSION, VERSION))
 
 
 def fetch(url):

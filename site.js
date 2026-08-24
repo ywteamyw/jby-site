@@ -31,6 +31,7 @@
       { href: 'news/article/',  label: 'Article' },
       { href: 'news/video/',    label: 'Video' },
       { href: 'news/event/',    label: 'Event' },
+      { href: 'news/search/',   label: 'Search results' },
       { href: 'all-pages/',     label: 'All prototypes', note: 'every version we built' }
     ]}
   ];
@@ -72,7 +73,7 @@
     'jby-contact/': 'contact/', 'jby-events/': 'events/', 'jby-listing/': 'listing/',
     'model-page/': 'models/riva-112/', 'jby-axopar/': 'brands/axopar/',
     'jby-knowledge-center/': 'news/', 'jby-knowledge-center/article.html': 'news/article/',
-    'jby-knowledge-center/video.html': 'news/video/', 'jby-knowledge-center/event.html': 'news/event/',
+    'jby-knowledge-center/video.html': 'news/video/', 'jby-knowledge-center/event.html': 'news/event/', 'jby-knowledge-center/search.html': 'news/search/',
     'jby-privacy-policy/': 'privacy-policy/', 'jby-terms-and-conditions/': 'terms/',
     'jby-statement-of-information/': 'statement-of-information/'
   };
