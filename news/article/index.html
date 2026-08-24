@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<base href="https://ywteamyw.github.io/jby-knowledge-center/">
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Article — Jeff Brown Yachts</title>
+<meta name="description" content="News and insights from Jeff Brown Yachts: brand announcements, new offices, owner features, and adventures." />
+<link rel="icon" href="assets/jby_logo.svg" />
+<link rel="stylesheet" href="assets/fonts.css" />
+<link rel="stylesheet" href="assets/styles.css" />
+<link rel="stylesheet" href="/jby-site/site.css">
+<script defer src="/jby-site/site.js"></script>
+</head>
+<body data-kc="insights">
+
+<div data-site-header></div>
+
+<!-- LIGHT TOP: breadcrumb + white article card (no gradient hero) -->
+<section class="article-top">
+  <div class="wrap">
+    <nav class="dh-crumbs" aria-label="Breadcrumb"><ol>
+      <li><a href="index.html#all">Knowledge Center</a></li><li class="sep">/</li>
+      <li><a href="index.html#insights">Insights &amp; News</a></li><li class="sep">/</li>
+      <li aria-current="page" id="a-crumb">Article</li>
+    </ol></nav>
+
+    <article class="article-card reveal in">
+      <h1 id="a-title">Article</h1>
+      <p class="article-dek" id="a-dek"></p>
+      <div class="article-meta">
+        <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span id="a-rt"></span></span>
+        <span class="mi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4.5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg><span id="a-date"></span></span>
+      </div>
+      <p class="article-byline" id="a-byline"></p>
+      <hr class="art-rule" />
+      <div class="article-body" id="a-body"></div>
+    </article>
+  </div>
+</section>
+
+<!-- RELATED -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:40px"><h2 class="h-sm">Related articles</h2><p>Continue exploring news and insights from Jeff Brown Yachts.</p></div>
+    <div class="media-grid cols-3" id="a-related"></div>
+  </div>
+</section>
+
+<div data-site-cta></div>
+<div data-site-footer></div>
+
+<script>
+/* Article detail — populate from ?a=<slug> */
+(function(){
+  var A = {
+    "pershing-us-dealer":{
+      t:"Pershing Names Jeff Brown Yachts Exclusive US Dealer",
+      dek:"Ferretti Group's Pershing has appointed Jeff Brown Yachts as an exclusive dealer for the United States.",
+      cat:"News", date:"October 28, 2025", rt:"2 min read", author:"Jeff Brown Yachts", img:"vessel-pershing.jpg",
+      body:"<p>Ferretti Group's Pershing brand has named Jeff Brown Yachts as an exclusive dealer for the United States, expanding our representation of the Italian performance-yacht builder across the market.</p>"
+        +"<h2>What it means for owners</h2>"
+        +"<p>The appointment adds Pershing's line of sport yachts to the brands we represent on both coasts, backed by our brokerage, service, and after-sales teams. Owners and prospective buyers can arrange viewings, sea trials, and new-build orders for Pershing directly through the Jeff Brown Yachts team.</p>",
+      src:{u:"https://www.boatinternational.com/boat-pro/news/pershing-dealer-us-jeff-brown-yachts",l:"BOAT International"}},
+    "riva-west-coast":{
+      t:"Riva Names Jeff Brown Yachts Exclusive West Coast Dealer",
+      dek:"Riva has appointed Jeff Brown Yachts as its new exclusive dealer for the Western United States.",
+      cat:"News", date:"2025", rt:"2 min read", author:"Jeff Brown Yachts", img:"brand-riva.webp",
+      body:"<p>Riva, the historic Italian marque, has named Jeff Brown Yachts as its new exclusive dealer for the Western United States, bringing one of the most celebrated names in yachting to owners across the region.</p>"
+        +"<p>The partnership pairs Riva's craftsmanship with our team's service and brokerage support, and underpins the brand's growing presence on the West Coast, including featured appearances at concours and owner events.</p>",
+      src:{u:"https://jeffbrownyachts.com/news/details/riva-announces-jeff-brown-yachts-as-its-new-exclusive-dealer-for-the-western-united-states",l:"Jeff Brown Yachts"}},
+    "pardo-west-coast":{
+      t:"Pardo Yachts Names JBY Exclusive US West Coast Dealer",
+      dek:"Italian brand Pardo Yachts has named Jeff Brown Yachts its exclusive U.S. West Coast dealer.",
+      cat:"News", date:"2025", rt:"2 min read", author:"Jeff Brown Yachts", img:"vessel-axopar.jpg",
+      body:"<p>Pardo Yachts has appointed Jeff Brown Yachts as its exclusive dealer for the U.S. West Coast, adding the Italian builder's elegant day boats and yachts to our represented brands.</p>"
+        +"<p>The appointment extends our line-up of premium European marques and gives West Coast owners a local point of contact for Pardo sales, service, and sea trials.</p>",
+      src:{u:"https://jeffbrownyachts.com/news/details/italian-brand-pardo-yachts-names-jeff-brown-yachts-exclusive-u.s-west-coast-dealer",l:"Jeff Brown Yachts"}},
+    "charleston-office":{
+      t:"Jeff Brown Yachts Opens a New Office in Charleston",
+      dek:"Jeff Brown Yachts has opened a new office in Charleston, South Carolina, expanding our East Coast presence.",
+      cat:"News", date:"2026", rt:"2 min read", author:"Jeff Brown Yachts", img:"marina-newport.jpg",
+      body:"<p>Jeff Brown Yachts has opened a new office in Charleston, South Carolina, strengthening our presence on the East Coast and bringing our brokerage and service closer to owners in the region.</p>"
+        +"<p>The Charleston team supports local sales, viewings, and after-sales care, and joins our growing network of offices across the country.</p>",
+      src:{u:"https://jeffbrownyachts.com/news/details/jeff-brown-yachts-opens-new-office-in-charleston",l:"Jeff Brown Yachts"}},
+    "deniz-ozcakir":{
+      t:"Deniz Ozcakir Named Head of Sales &amp; Marketing",
+      dek:"Jeff Brown Yachts has announced Deniz Ozcakir as Head of Sales and Marketing.",
+      cat:"News", date:"2025", rt:"2 min read", author:"Jeff Brown Yachts", img:"consult-overlook.jpg",
+      body:"<p>Jeff Brown Yachts has announced the appointment of Deniz Ozcakir as Head of Sales and Marketing, a role that supports the company's continued growth across brands and regions.</p>"
+        +"<p>The appointment reflects our ongoing investment in the team behind the brand, from brokerage and marketing to owner care.</p>",
+      src:{u:"https://jeffbrownyachts.com/news/details/jeff-brown-yachts-announces-deniz-ozcakir-as-head-of-sales-and-marketing",l:"Jeff Brown Yachts"}},
+    "brabus-shadow-500":{
+      t:"Showcasing the BRABUS Shadow 500 on the West Coast",
+      dek:"Jeff Brown Yachts is proudly showcasing the BRABUS Shadow 500.",
+      cat:"News", date:"2025", rt:"2 min read", author:"Jeff Brown Yachts", img:"vessel-brabus.jpg",
+      body:"<p>Jeff Brown Yachts is proudly showcasing the BRABUS Shadow 500, the striking performance day boat that pairs BRABUS design with Axopar engineering.</p>"
+        +"<p>Get in touch with our team to arrange a viewing or sea trial, or to learn more about availability across the BRABUS Shadow range.</p>",
+      src:{u:"https://jeffbrownyachts.com/news/details/jeff-brown-yachts-proudly-showcasing-the-brabus-shadow-500",l:"Jeff Brown Yachts"}},
+    "modern-luxury":{
+      t:"Jeff Brown: Modern Luxury \"Power Players\" Spotlight",
+      dek:"Jeff Brown was featured in Modern Luxury's \"Power Players\" spotlight.",
+      cat:"News", date:"2025", rt:"2 min read", author:"Jeff Brown Yachts", img:"lifestyle-legacy.jpg",
+      body:"<p>Jeff Brown was featured in Modern Luxury's \"Power Players\" spotlight, recognizing his role in the yachting industry and the growth of Jeff Brown Yachts.</p>"
+        +"<p>The feature highlights the brand's approach to brokerage, service, and the owner experience across the yachts we represent.</p>",
+      src:{u:"https://jeffbrownyachts.com/news/details/jeff-brown-modern-luxury-power-players-spotlight",l:"Jeff Brown Yachts"}},
+    "viggen":{
+      t:"Owner Feature: Joe Dagostino's J/105 \"Viggen\"",
+      dek:"An owner feature on Joe Dagostino and his J/105 \"Viggen,\" based out of the San Diego Yacht Club.",
+      cat:"Owner Story", date:"2025", rt:"3 min read", author:"Jeff Brown Yachts", img:"ev_riva.jpg",
+      body:"<p>In this brokerage owner feature, we profile Joe Dagostino and his J/105 \"Viggen,\" campaigned out of the San Diego Yacht Club.</p>"
+        +"<p>The story looks at the boat, the sailing behind it, and what ownership looks like day to day, part of our ongoing series featuring the owners we work with.</p>",
+      src:{u:"https://jeffbrownyachts.com/news/details/brokerage-owner-feature-joe-dagostinos-j-105-viggen",l:"Jeff Brown Yachts"}},
+    "carolinas-adventure":{
+      t:"The Axopar &amp; BRABUS Carolinas Adventure",
+      dek:"An invite-only coastal journey created by Jeff and Karen Brown, part of the Axopar &amp; BRABUS Adventure series.",
+      cat:"Adventures", date:"July 2024", rt:"3 min read", author:"Jeff Brown Yachts", img:"vessel-brabus.jpg",
+      body:"<p>The Axopar &amp; BRABUS Carolinas Adventure was an invite-only coastal journey created by Jeff and Karen Brown, bringing a small group of owners together to run the fleet along the Carolina coast.</p>"
+        +"<p>The Adventure series is about the experience of ownership on the water, real miles, real anchorages, and time aboard with people who love these boats.</p>",
+      src:{u:"https://jeffbrownyachts.com/news/category/adventures",l:"Jeff Brown Yachts"}},
+    "salish-sea":{
+      t:"Cruising the Salish Sea: A Pacific Northwest Adventure",
+      dek:"A Pacific Northwest adventure cruising the Salish Sea, part of the Jeff Brown Yachts Adventure series.",
+      cat:"Adventures", date:"2025", rt:"3 min read", author:"Jeff Brown Yachts", img:"marina-newport.jpg",
+      body:"<p>This Adventure takes the fleet north to cruise the Salish Sea, the island-strewn waters of the Pacific Northwest, for a run of protected passages, quiet anchorages, and open-water crossings.</p>"
+        +"<p>Like the rest of the series, it is built around time on the water and the way these boats perform where owners actually use them.</p>",
+      src:{u:"https://jeffbrownyachts.com/news/category/adventures",l:"Jeff Brown Yachts"}}
+  };
+
+  function param(n){ var m=new RegExp("[?&]"+n+"=([^&]+)").exec(location.search); return m?decodeURIComponent(m[1]):""; }
+  var slug = param("a"); if(!A[slug]) slug = "pershing-us-dealer";
+  var a = A[slug];
+
+  document.getElementById("a-crumb").innerHTML = a.t;
+  document.getElementById("a-title").innerHTML = a.t;
+  document.getElementById("a-dek").innerHTML = a.dek;
+  document.getElementById("a-rt").textContent = a.rt;
+  document.getElementById("a-date").textContent = a.date;
+  document.getElementById("a-byline").innerHTML = "Written by " + a.author;
+  document.getElementById("a-body").innerHTML = a.body
+    + '<p class="art-source">Source: <a href="'+a.src.u+'" target="_blank" rel="noopener">'+a.src.l+'</a></p>';
+  document.title = a.t.replace(/&quot;/g,'"').replace(/&amp;/g,"&") + " — Jeff Brown Yachts";
+
+  /* Related — three other articles */
+  var keys = Object.keys(A).filter(function(k){ return k!==slug; }).slice(0,3);
+  document.getElementById("a-related").innerHTML = keys.map(function(k){
+    var r = A[k];
+    return '<a class="card acard" href="article.html?a='+k+'">'
+      + '<div class="thumb"><img src="assets/img/'+r.img+'" alt="" /><span class="badge">'+r.cat+'</span></div>'
+      + '<h3>'+r.t+'</h3><p>'+r.dek+'</p>'
+      + '<div class="date"><span>'+r.date+'</span><span class="rt">'+r.rt+'</span></div></a>';
+  }).join("");
+})();
+</script>
+<script src="assets/app.js"></script>
+</body>
+</html>

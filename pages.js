@@ -8,15 +8,15 @@ window.JBY_GROUPS = [
     title: 'Main pages',
     note: 'The backbone of the site.',
     pages: [
-      { id: 'home',        name: 'Home',                 path: 'jby-homepage.github.io/',        desc: 'Home page V3.31 — the master layout every other page is built on.' },
-      { id: 'about',       name: 'About Us',             path: 'jby-about/',                     desc: 'Story, numbers, team and service teasers.' },
-      { id: 'services',    name: 'All Services',         path: 'jby-all-services/',              desc: 'Overview hub for the three service pages.' },
-      { id: 'locations',   name: 'Our Locations',        path: 'jby-locations/',                 desc: 'Nine offices, cards on the left, live map on the right.' },
-      { id: 'office',      name: 'Office — San Diego',   path: 'jby-office/',                    desc: 'Single location page: marina & boatyard, vessels, local team.' },
-      { id: 'team',        name: 'Our Team',             path: 'jby-team/',                      desc: '16 people, filter by location.' },
-      { id: 'member',      name: 'Team Member',          path: 'jby-team-member/',               desc: 'Sales professional profile (Will De Jong).' },
-      { id: 'contact',     name: 'Contact Us',           path: 'jby-contact/',                   desc: 'Contact form with the custom interest dropdown.' },
-      { id: 'events',      name: 'Events',               path: 'jby-events/',                    desc: 'Boat shows and owner events with the drive-up scroll animation.' }
+      { id: 'home',        name: 'Home',                 path: 'jby-homepage.github.io/',        desc: 'Home page V3.31 — the master layout every other page is built on.' , site: '' },
+      { id: 'about',       name: 'About Us',             path: 'jby-about/',                     desc: 'Story, numbers, team and service teasers.' , site: 'about/' },
+      { id: 'services',    name: 'All Services',         path: 'jby-all-services/',              desc: 'Overview hub for the three service pages.' , site: 'services/' },
+      { id: 'locations',   name: 'Our Locations',        path: 'jby-locations/',                 desc: 'Nine offices, cards on the left, live map on the right.' , site: 'locations/' },
+      { id: 'office',      name: 'Office — San Diego',   path: 'jby-office/',                    desc: 'Single location page: marina & boatyard, vessels, local team.' , site: 'locations/san-diego/' },
+      { id: 'team',        name: 'Our Team',             path: 'jby-team/',                      desc: '16 people, filter by location.' , site: 'team/' },
+      { id: 'member',      name: 'Team Member',          path: 'jby-team-member/',               desc: 'Sales professional profile (Will De Jong).' , site: 'team/will-de-jong/' },
+      { id: 'contact',     name: 'Contact Us',           path: 'jby-contact/',                   desc: 'Contact form with the custom interest dropdown.' , site: 'contact/' },
+      { id: 'events',      name: 'Events',               path: 'jby-events/',                    desc: 'Boat shows and owner events with the drive-up scroll animation.' , site: 'events/' }
     ]
   },
   {
@@ -25,10 +25,10 @@ window.JBY_GROUPS = [
     note: 'Three services, plus the reworked variants.',
     pages: [
       { id: 'sm',      name: 'Service & Maintenance',        path: 'jby-service-maintenance/',   desc: 'Cinematic service page, version 1.' },
-      { id: 'sm2',     name: 'Service & Maintenance V2',     path: 'jby-service-maintenance-2/', desc: 'Heavy revision: new map with wrench markers and yard modal.', tag: 'variant' },
-      { id: 'ym',      name: 'Yacht Management',             path: 'jby-yacht-management/',      desc: 'The Art of Effortless Ownership — full-bleed scenes.' },
+      { id: 'sm2',     name: 'Service & Maintenance V2',     path: 'jby-service-maintenance-2/', desc: 'Heavy revision: new map with wrench markers and yard modal.', tag: 'variant' , site: 'services/maintenance/' },
+      { id: 'ym',      name: 'Yacht Management',             path: 'jby-yacht-management/',      desc: 'The Art of Effortless Ownership — full-bleed scenes.' , site: 'services/yacht-management/' },
       { id: 'sell',    name: 'Sell Your Yacht',              path: 'jby-sell-your-yacht/',       desc: 'Valuation form, stat strip, recently represented carousel.' },
-      { id: 'sell2',   name: 'Sell Your Yacht V2',           path: 'jby-sell-your-yacht-v2/',    desc: 'Reworked: hero metrics, gallery showcase, social reach, testimonials.', tag: 'variant' }
+      { id: 'sell2',   name: 'Sell Your Yacht V2',           path: 'jby-sell-your-yacht-v2/',    desc: 'Reworked: hero metrics, gallery showcase, social reach, testimonials.', tag: 'variant' , site: 'services/sell-your-yacht/' }
     ]
   },
   {
@@ -36,9 +36,9 @@ window.JBY_GROUPS = [
     title: 'Inventory & brands',
     note: 'Everything around a vessel.',
     pages: [
-      { id: 'listing', name: 'Vessel Listing',       path: 'jby-listing/',      desc: 'Detail page: gallery, range map, spec tabs, loan calculator.' },
-      { id: 'model',   name: 'Model — Riva 112',     path: 'model-page/',       desc: 'Riva 112 Dolcevita Super: video hero, deck plans, tabbed gallery.' },
-      { id: 'axopar',  name: 'Brand — Axopar',       path: 'jby-axopar/',       desc: 'Brand page with prefilled contact modal and model range.' }
+      { id: 'listing', name: 'Vessel Listing',       path: 'jby-listing/',      desc: 'Detail page: gallery, range map, spec tabs, loan calculator.' , site: 'listing/' },
+      { id: 'model',   name: 'Model — Riva 112',     path: 'model-page/',       desc: 'Riva 112 Dolcevita Super: video hero, deck plans, tabbed gallery.' , site: 'models/riva-112/' },
+      { id: 'axopar',  name: 'Brand — Axopar',       path: 'jby-axopar/',       desc: 'Brand page with prefilled contact modal and model range.' , site: 'brands/axopar/' }
     ]
   },
   {
@@ -46,10 +46,10 @@ window.JBY_GROUPS = [
     title: 'News & media',
     note: 'Two takes on the content hub.',
     pages: [
-      { id: 'kc2',       name: 'Knowledge Center V2',   path: 'jby-knowledge-center/',          desc: 'Latest version of the hub, with its own search.' },
-      { id: 'kc2-art',   name: '— Article',             path: 'jby-knowledge-center/article.html', desc: 'Article detail template.', sub: true },
-      { id: 'kc2-vid',   name: '— Video',               path: 'jby-knowledge-center/video.html',   desc: 'Video detail template.', sub: true },
-      { id: 'kc2-evt',   name: '— Event',               path: 'jby-knowledge-center/event.html',   desc: 'Event detail template.', sub: true },
+      { id: 'kc2',       name: 'Knowledge Center V2',   path: 'jby-knowledge-center/',          desc: 'Latest version of the hub, with its own search.' , site: 'news/' },
+      { id: 'kc2-art',   name: '— Article',             path: 'jby-knowledge-center/article.html', desc: 'Article detail template.', sub: true , site: 'news/article/' },
+      { id: 'kc2-vid',   name: '— Video',               path: 'jby-knowledge-center/video.html',   desc: 'Video detail template.', sub: true , site: 'news/video/' },
+      { id: 'kc2-evt',   name: '— Event',               path: 'jby-knowledge-center/event.html',   desc: 'Event detail template.', sub: true , site: 'news/event/' },
       { id: 'news',      name: 'News & Media (V1)',     path: 'jby-news-media/',                desc: 'The lean 3-pillar first version.', tag: 'variant' }
     ]
   },
@@ -58,9 +58,9 @@ window.JBY_GROUPS = [
     title: 'Legal',
     note: 'One shared chassis for all three.',
     pages: [
-      { id: 'privacy', name: 'Privacy Policy',           path: 'jby-privacy-policy/',           desc: 'Contents rail, black labels, standard footer.' },
-      { id: 'terms',   name: 'Terms & Conditions',       path: 'jby-terms-and-conditions/',     desc: 'Built on the Privacy Policy chassis.' },
-      { id: 'soi',     name: 'Statement of Information', path: 'jby-statement-of-information/', desc: 'The master legal page — verified data only.' }
+      { id: 'privacy', name: 'Privacy Policy',           path: 'jby-privacy-policy/',           desc: 'Contents rail, black labels, standard footer.' , site: 'privacy-policy/' },
+      { id: 'terms',   name: 'Terms & Conditions',       path: 'jby-terms-and-conditions/',     desc: 'Built on the Privacy Policy chassis.' , site: 'terms/' },
+      { id: 'soi',     name: 'Statement of Information', path: 'jby-statement-of-information/', desc: 'The master legal page — verified data only.' , site: 'statement-of-information/' }
     ]
   },
   {
