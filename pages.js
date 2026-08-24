@@ -16,6 +16,8 @@ window.JBY_GROUPS = [
       { id: 'team',        name: 'Our Team',             path: 'jby-team/',                      desc: '16 people, filter by location.' , site: 'team/' },
       { id: 'member',      name: 'Team Member',          path: 'jby-team-member/',               desc: 'Sales professional profile (Will De Jong).' , site: 'team/will-de-jong/' },
       { id: 'contact',     name: 'Contact Us',           path: 'jby-contact/',                   desc: 'Contact form with the custom interest dropdown.' , site: 'contact/' },
+      { id: 'faq',         name: 'FAQ',                  path: 'jby-faq/',                       desc: '17 questions in 4 categories, live search and facet tabs.' , site: 'faq/' },
+      { id: 'e404',        name: '404 Page not found',   path: 'jby-404/',                       desc: 'Navy hero, popular destinations, standard footer.' , site: '404/' },
       { id: 'events',      name: 'Events',               path: 'jby-events/',                    desc: 'Boat shows and owner events with the drive-up scroll animation.' , site: 'events/' }
     ]
   },

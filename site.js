@@ -24,7 +24,8 @@
       { href: 'locations/',             label: 'Locations' },
       { href: 'locations/san-diego/',   label: 'San Diego marina' },
       { href: 'events/',                label: 'Events' },
-      { href: 'contact/',               label: 'Contact us' }
+      { href: 'contact/',               label: 'Contact us' },
+      { href: 'faq/',                   label: 'FAQ' }
     ]},
     { title: 'News & media', links: [
       { href: 'news/',          label: 'News hub' },
@@ -54,6 +55,7 @@
     'contact': 'contact/', 'contact us': 'contact/', 'contact an expert': 'contact/',
     'privacy policy': 'privacy-policy/', 'terms & conditions': 'terms/',
     'terms and conditions': 'terms/', 'statement of information': 'statement-of-information/',
+    'faq': 'faq/', 'frequently asked questions': 'faq/',
     'san diego': 'locations/san-diego/', 'newport harbor': 'locations/', 'marina del rey': 'locations/',
     'sausalito': 'locations/', 'seattle': 'locations/', 'kona': 'locations/',
     'wrightsville beach': 'locations/', 'charleston': 'locations/', 'san diego marina & boatyard': 'locations/san-diego/'
@@ -75,7 +77,8 @@
     'jby-knowledge-center/': 'news/', 'jby-knowledge-center/article.html': 'news/article/',
     'jby-knowledge-center/video.html': 'news/video/', 'jby-knowledge-center/event.html': 'news/event/', 'jby-knowledge-center/search.html': 'news/search/',
     'jby-privacy-policy/': 'privacy-policy/', 'jby-terms-and-conditions/': 'terms/',
-    'jby-statement-of-information/': 'statement-of-information/'
+    'jby-statement-of-information/': 'statement-of-information/',
+    'jby-faq/': 'faq/', 'jby-404/': '404/'
   };
 
   function mapped(href) {

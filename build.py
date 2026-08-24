@@ -36,9 +36,11 @@ PAGES = [
     ("privacy-policy/",              "jby-privacy-policy/"),
     ("terms/",                       "jby-terms-and-conditions/"),
     ("statement-of-information/",    "jby-statement-of-information/"),
+    ("faq/",                         "jby-faq/"),
+    ("404/",                         "jby-404/"),
 ]
 
-VERSION = "4"   # bump when site.js / site.css change, so pages pick them up immediately
+VERSION = "5"   # bump when site.js / site.css change, so pages pick them up immediately
 CHROME = ('<link rel="stylesheet" href="/jby-site/site.css?v=%s">\n'
           '<script defer src="/jby-site/site.js?v=%s"></script>\n' % (VERSION, VERSION))
 
@@ -86,3 +88,10 @@ if __name__ == "__main__":
     for slug, src in PAGES:
         size = build(slug, src)
         print("%-32s <- %-42s %6.1f KB" % ("/" + slug, src, size / 1024))
+
+    # GitHub Pages serves /404.html for any unknown path under the site
+    with open(os.path.join(OUT, "404", "index.html")) as f:
+        not_found = f.read()
+    with open(os.path.join(OUT, "404.html"), "w") as f:
+        f.write(not_found)
+    print("%-32s <- %-42s" % ("/404.html", "copy of /404/"))
