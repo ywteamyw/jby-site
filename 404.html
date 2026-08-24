@@ -57,9 +57,9 @@ a{color:inherit;text-decoration:none}
 .e404-actions a.solid:hover{background:var(--sand);border-color:var(--sand);color:#111}
 
 /* the big numeral, quietly behind the links */
-.e404-figure{position:relative;display:flex;align-items:center;justify-content:center;min-height:280px}
-.e404-figure .num{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:220px;line-height:1;
-  color:rgba(255,255,255,0.10);letter-spacing:.02em;user-select:none}
+.e404-figure{position:relative;display:flex;align-items:center;justify-content:flex-start;min-height:220px;overflow:hidden}
+.e404-figure .num{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:clamp(110px,11vw,168px);line-height:1;
+  color:rgba(255,255,255,0.10);letter-spacing:.02em;user-select:none;white-space:nowrap}
 .e404-links{position:relative;width:100%;border-top:0.5px solid rgba(255,255,255,0.18)}
 .e404-links a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 2px;
   border-bottom:0.5px solid rgba(255,255,255,0.18);
@@ -67,7 +67,7 @@ a{color:inherit;text-decoration:none}
   color:#fff;transition:color .2s}
 .e404-links a:hover{color:var(--sand)}
 .e404-links a svg{width:18px;height:18px;flex:0 0 auto;opacity:.8}
-.e404-links h2{font-family:'Myriad Pro',sans-serif;font-weight:400;font-size:12px;line-height:16px;letter-spacing:.16em;
+.e404 h2{font-family:'Myriad Pro',sans-serif;font-weight:400;font-size:12px;line-height:16px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--sand);margin:0 0 6px}
 
 /* FOOTER */
