@@ -50,6 +50,7 @@ window.JBY_GROUPS = [
       { id: 'kc2-art',   name: '— Article',             path: 'jby-knowledge-center/article.html', desc: 'Article detail template.', sub: true , site: 'news/article/' },
       { id: 'kc2-vid',   name: '— Video',               path: 'jby-knowledge-center/video.html',   desc: 'Video detail template.', sub: true , site: 'news/video/' },
       { id: 'kc2-evt',   name: '— Event',               path: 'jby-knowledge-center/event.html',   desc: 'Event detail template.', sub: true , site: 'news/event/' },
+      { id: 'kc2-search', name: '— Search',            path: 'jby-knowledge-center/search.html',  desc: 'Search results inside the hub.', sub: true , site: 'news/search/' },
       { id: 'news',      name: 'News & Media (V1)',     path: 'jby-news-media/',                desc: 'The lean 3-pillar first version.', tag: 'variant' }
     ]
   },

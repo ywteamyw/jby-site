@@ -38,7 +38,7 @@ PAGES = [
     ("statement-of-information/",    "jby-statement-of-information/"),
 ]
 
-VERSION = "3"   # bump when site.js / site.css change, so pages pick them up immediately
+VERSION = "4"   # bump when site.js / site.css change, so pages pick them up immediately
 CHROME = ('<link rel="stylesheet" href="/jby-site/site.css?v=%s">\n'
           '<script defer src="/jby-site/site.js?v=%s"></script>\n' % (VERSION, VERSION))
 

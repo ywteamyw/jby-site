@@ -85,8 +85,8 @@ footer .f-in{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 footer a{color:#fff}
 .hidden{display:none !important}
 </style>
-<link rel="stylesheet" href="/jby-site/site.css?v=3">
-<script defer src="/jby-site/site.js?v=3"></script>
+<link rel="stylesheet" href="/jby-site/site.css?v=4">
+<script defer src="/jby-site/site.js?v=4"></script>
 </head>
 <body>
 
@@ -104,7 +104,7 @@ footer a{color:#fff}
     <div class="hero-meta">
       <div><span class="n" id="m-pages">0</span><span class="l">Prototypes</span></div>
       <div><span class="n" id="m-groups">0</span><span class="l">Sections</span></div>
-      <div><span class="n">22</span><span class="l">On the live site</span></div>
+      <div><span class="n" id="m-site">0</span><span class="l">On the live site</span></div>
     </div>
   </div>
 </div>
@@ -157,6 +157,7 @@ JBY_GROUPS.forEach((g, i) => {
 
 document.getElementById('m-pages').textContent  = JBY_FLAT.length;
 document.getElementById('m-groups').textContent = JBY_GROUPS.length;
+document.getElementById('m-site').textContent   = JBY_FLAT.filter(p => p.site !== undefined).length;
 
 const q = document.getElementById('q'), count = document.getElementById('count');
 function filter() {
