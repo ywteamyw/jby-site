@@ -49,6 +49,12 @@ def fetch(url):
         return r.read().decode("utf-8", "replace")
 
 
+# small source-side bugs worth patching while assembling
+FIXUPS = {
+    "": [("./assets/jby_logo.svg", "./JBY-V3.3-assets/jby_logo.svg")],   # footer logo points at a folder the home repo does not have
+}
+
+
 def build(slug, src):
     url = BASE + src
     html = fetch(url)
@@ -62,6 +68,9 @@ def build(slug, src):
         raise SystemExit("no <head> in " + url)
     head_end = m.end()
     html = html[:head_end] + '\n<base href="%s">\n' % base_dir + html[head_end:]
+
+    for old, new in FIXUPS.get(slug, []):
+        html = html.replace(old, new)
 
     m = re.search(r"</head>", html, re.I)
     html = html[:m.start()] + CHROME + html[m.start():]
