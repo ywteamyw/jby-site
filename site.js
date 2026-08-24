@@ -58,6 +58,36 @@
     'wrightsville beach': 'locations/', 'charleston': 'locations/', 'san diego marina & boatyard': 'locations/san-diego/'
   };
 
+
+  /* pages as they live in their own repos -> where they sit on this site,
+     so any link that points at a source repo stays inside the site */
+  var ORIGIN = 'https://ywteamyw.github.io/';
+  var SRC = {
+    'jby-homepage.github.io/': '', 'jby-about/': 'about/', 'jby-all-services/': 'services/',
+    'jby-service-maintenance-2/': 'services/maintenance/', 'jby-service-maintenance/': 'services/maintenance/',
+    'jby-yacht-management/': 'services/yacht-management/',
+    'jby-sell-your-yacht-v2/': 'services/sell-your-yacht/', 'jby-sell-your-yacht/': 'services/sell-your-yacht/',
+    'jby-team/': 'team/', 'jby-team-member/': 'team/will-de-jong/',
+    'jby-locations/': 'locations/', 'jby-office/': 'locations/san-diego/',
+    'jby-contact/': 'contact/', 'jby-events/': 'events/', 'jby-listing/': 'listing/',
+    'model-page/': 'models/riva-112/', 'jby-axopar/': 'brands/axopar/',
+    'jby-knowledge-center/': 'news/', 'jby-knowledge-center/article.html': 'news/article/',
+    'jby-knowledge-center/video.html': 'news/video/', 'jby-knowledge-center/event.html': 'news/event/',
+    'jby-privacy-policy/': 'privacy-policy/', 'jby-terms-and-conditions/': 'terms/',
+    'jby-statement-of-information/': 'statement-of-information/'
+  };
+
+  function mapped(href) {
+    if (!href || href.indexOf(ORIGIN) !== 0) return null;
+    var rest = href.slice(ORIGIN.length);
+    var tail = '';
+    var cut = rest.search(/[#?]/);
+    if (cut > -1) { tail = rest.slice(cut); rest = rest.slice(0, cut); }
+    var key = SRC.hasOwnProperty(rest) ? rest : rest.replace(/index\.html$/, '');
+    if (!SRC.hasOwnProperty(key)) return null;
+    return ROOT + SRC[key] + tail;
+  }
+
   var here = location.pathname.replace(/index\.html$/, '');
 
   /* 1. keep in-page anchors on this page (they would otherwise follow <base>) */
@@ -141,6 +171,13 @@
       if (t === 'contact an expert' && !b.hasAttribute('data-target') && !b.hasAttribute('data-open-expert')) {
         b.addEventListener('click', function () { location.href = ROOT + 'contact/'; });
       }
+    });
+
+    /* links that point back at a source repo are pulled into the site */
+    document.querySelectorAll('a[href]').forEach(function (a) {
+      if (a.closest('.jbys-menu')) return;
+      var to = mapped(a.href);
+      if (to) a.setAttribute('href', to);
     });
 
     fixAnchors(document);
