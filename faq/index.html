@@ -159,6 +159,7 @@ footer{background:var(--paper);padding:40px 0 80px;color:var(--mute);font-size:1
   .nav{padding:16px 0}.nav.scrolled{padding:12px 0}
   .nav-in{padding:0 24px}.foot-grid{padding:0 24px}
   main{padding-top:104px}.wrap{padding:0 24px}
+  .faq-head{padding-top:40px}   /* the .wrap shorthand above zeroes it out, put it back */
   .nav .cta{display:none}
   .faq-head h1{font-size:28px;line-height:40px}
   .faq-head p{font-size:18px;line-height:26px}
@@ -169,7 +170,14 @@ footer{background:var(--paper);padding:40px 0 80px;color:var(--mute);font-size:1
   footer{padding:40px 0 64px}.back-top{display:none}
   .expert{padding:56px 24px;min-height:auto}.expert h2{font-size:24px;line-height:36px}
 }
-@media (max-width:560px){ .faq-filter{gap:16px 20px} .faq-filter button{font-size:15px} }
+/* Mobile: the tabs stay on ONE row and scroll horizontally, same pattern as the Knowledge Center */
+@media (max-width:760px){
+  .faq-filter{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;gap:0 24px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .faq-filter::-webkit-scrollbar{display:none}
+  .faq-filter button{flex:0 0 auto}
+}
+@media (max-width:560px){ .faq-filter button{font-size:15px} }
 @media (prefers-reduced-motion:reduce){ .reveal,.split-words .w{transition:none;opacity:1;transform:none} .faq-a{transition:none} }
 </style>
 <link rel="stylesheet" href="/jby-site/site.css?v=6">
