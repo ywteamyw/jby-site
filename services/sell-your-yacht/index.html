@@ -317,6 +317,15 @@ footer{background:var(--page);padding:40px 40px 80px;color:var(--c2);font-size:1
 .casc>*{opacity:0;transform:translateY(38px);transition:opacity 1s var(--ease-out),transform 1s var(--ease-out);will-change:opacity,transform}
 .casc>.lx-in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){.reveal,.slide-l,.casc>*{transition:none!important;opacity:1!important;transform:none!important}html{scroll-behavior:auto}.marquee-track{animation:none}}
+
+/* ====== MOBILE POLISH (phones only) ====== */
+@media (max-width:600px){
+  /* "info@jeffbrownyachts.com" is one unbreakable token in uppercase Mesmerize:
+     one size step down keeps the footer inside a phone screen */
+  .foot-col p{font-size:14px;line-height:18px}
+  .foot-col p a{font-size:inherit}
+}
+
 </style>
 <link rel="stylesheet" href="/jby-site/site.css?v=6">
 <script defer src="/jby-site/site.js?v=6"></script>

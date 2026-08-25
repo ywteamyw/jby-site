@@ -897,6 +897,18 @@ body.cx-lock{overflow:hidden}
   .ax-stats{grid-template-columns:1fr}
   .ax-tab{font-size:20px}
 }
+
+/* ====== MOBILE POLISH (phones only) ====== */
+@media (max-width:600px){
+  /* the wide CTA does not fit next to the burger and the logo */
+  .nav .cta{display:none}
+
+  /* "info@jeffbrownyachts.com" is one unbreakable token in uppercase Mesmerize:
+     one size step down keeps the footer inside a phone screen */
+  .foot-col p{font-size:14px;line-height:18px}
+  .foot-col p a{font-size:inherit}
+}
+
 </style>
 <link rel="stylesheet" href="/jby-site/site.css?v=6">
 <script defer src="/jby-site/site.js?v=6"></script>

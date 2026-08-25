@@ -705,6 +705,19 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--secondary);bor
   .f-grid{grid-template-columns:1fr}
   .field.full{grid-column:1}
 }
+
+/* ====== MOBILE POLISH (phones only) ====== */
+@media (max-width:600px){
+  /* the "Download PDF" row pushed the page 30px wider than the screen */
+  .pdf{flex-wrap:wrap;gap:14px}
+  .pdf h4,.pdf .btn-ghost{width:100%}
+  .pdf .btn-ghost{justify-content:center}
+
+  /* "info@jeffbrownyachts.com" is one unbreakable token in uppercase Mesmerize */
+  .foot-col p{font-size:14px;line-height:18px}
+  .foot-col p a{font-size:inherit}
+}
+
 </style>
 <link rel="stylesheet" href="/jby-site/site.css?v=6">
 <script defer src="/jby-site/site.js?v=6"></script>

@@ -256,6 +256,15 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
 .tmon-btn:disabled:hover{border-color:rgba(0,0,0,0.14);color:var(--ink)}
 .tmon-btn svg{width:20px;height:20px;display:block}
 @media(max-width:760px){.tmon{padding:72px 0}.tmon-wrap{padding:0 24px}.tmon-q{flex-basis:100%;padding:0}.tmon-q:nth-child(even){border-left:0}}
+
+/* ====== MOBILE POLISH (phones only) ====== */
+@media (max-width:600px){
+  /* "info@jeffbrownyachts.com" is one unbreakable token in uppercase Mesmerize:
+     one size step down keeps the footer inside a phone screen */
+  .foot-col p{font-size:14px;line-height:18px}
+  .foot-col p a{font-size:inherit}
+}
+
 </style>
 <link rel="stylesheet" href="/jby-site/site.css?v=6">
 <script defer src="/jby-site/site.js?v=6"></script>

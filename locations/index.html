@@ -203,6 +203,21 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
   .loc-filter button{font-size:15px}
 }
 @media (prefers-reduced-motion:reduce){ .reveal,.split-words .w{transition:none;opacity:1;transform:none} }
+
+/* ====== MOBILE POLISH (phones only) ====== */
+@media (max-width:600px){
+  /* .wrap's padding shorthand in the query above zeroes the head's top padding,
+     so the title sat right under the fixed header */
+  .loc-head{padding-top:40px}
+
+  /* modal spec labels wrap instead of pushing their column */
+  .loc-modal-row dt{overflow-wrap:anywhere}
+
+  /* "info@jeffbrownyachts.com" is one unbreakable token in uppercase Mesmerize */
+  .foot-col p{font-size:14px;line-height:18px}
+  .foot-col p a{font-size:inherit}
+}
+
 </style>
 <link rel="stylesheet" href="/jby-site/site.css?v=6">
 <script defer src="/jby-site/site.js?v=6"></script>

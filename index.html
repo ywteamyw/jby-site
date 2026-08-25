@@ -722,6 +722,59 @@ a:focus-visible,button:focus-visible,[role="button"]:focus-visible,input:focus-v
 .foot-locs{display:flex;flex-direction:column;gap:14px;margin:0}
 .foot-locs a{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:16px;line-height:20px;letter-spacing:0;text-transform:uppercase;color:var(--ink);text-decoration:none;transition:color .2s}
 .foot-locs a:hover{color:var(--navy)}
+
+/* ====================================================================== */
+/* MOBILE POLISH (phones only, nothing above 600px is touched)            */
+/* ====================================================================== */
+@media (max-width:600px){
+  /* the header keeps burger, logo and search; the wide CTA does not fit a phone
+     (every other page of the site already hides it at this width) */
+  .nav{grid-template-columns:1fr auto 1fr;padding:14px 20px}
+  .nav.scrolled{padding:10px 20px}
+  .nav .cta{display:none}
+  .nav .logo{width:48px;height:48px}
+  .nav.scrolled .logo{width:44px;height:44px}
+
+  /* the sticky section index sits right under a shorter header */
+  .section-index{top:76px;font-size:13px}
+  .si-item{font-size:13px}
+
+  /* brand marks were 457px wide on a 375px screen and blew the layout out */
+  .builders .mark img{height:auto;max-height:60px;max-width:100%}
+  .builders .mark .word{font-size:36px;line-height:1.1}
+  .builders .mark{min-height:96px}
+
+  /* filter rows scroll on one line instead of overflowing */
+  .sec-filter{flex-wrap:nowrap;overflow-x:auto;gap:20px;padding-left:24px;padding-right:24px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .sec-filter::-webkit-scrollbar{display:none}
+  .sec-filter button{flex:0 0 auto;white-space:nowrap}
+  .sec-filter-visit{padding-left:0;padding-right:0}
+
+  /* cards in the horizontal rails size to the screen */
+  .event-card{flex:0 0 84vw}
+  .vessel-card{flex:0 0 78vw;height:auto;min-height:340px}
+
+  /* heading + link rows stack instead of forcing the page wider */
+  .s-title-row,.visit-head-row,.vessels-head-row,.voices-head-row{flex-direction:column;align-items:flex-start;gap:14px}
+  .s-title-row{padding-left:24px;padding-right:24px}
+
+  /* the uppercase email is one unbreakable token: one size step down keeps it inside */
+  .foot-col p{font-size:14px;line-height:18px}
+  .foot-col p a{font-size:inherit}
+
+  /* long spec labels inside the vessel cards wrap instead of running out */
+  .v-body h4,.v-body p{overflow-wrap:anywhere}
+
+  /* one heading size on phones: the page mixed 32px and 24px section titles */
+  .what-we-do h2,.videos .head h2,.visit h2,.s-title-row h2,.voices h2{font-size:26px;line-height:36px}
+  .s-title-row>*{max-width:100%}
+  .videos .head p,.what-we-do .lead{font-size:16px;line-height:26px}
+
+  /* the two buttons under a brand mark stack when they do not fit side by side */
+  .builders .actions{flex-wrap:wrap;justify-content:center;width:100%}
+  .builders .actions>*{flex:0 1 auto}
+}
 </style>
 <link rel="stylesheet" href="/jby-site/site.css?v=6">
 <script defer src="/jby-site/site.js?v=6"></script>
