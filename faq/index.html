@@ -58,34 +58,44 @@ main{padding-top:128px}
 .wrap{max-width:1440px;margin:0 auto;padding:0 var(--page-pad)}
 .faq-head{padding-top:48px}
 .faq-head h1{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:32px;line-height:48px;letter-spacing:0;text-transform:uppercase;color:#111;margin:0}
-.faq-head p{font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:20px;line-height:28px;color:var(--mute);margin:8px 0 0;max-width:70ch}
 
 /* SEARCH */
-.faq-search{margin-top:34px;position:relative;max-width:520px}
+.faq-search{margin-top:28px;position:relative;max-width:520px}
 .faq-search input{width:100%;height:48px;border:0.5px solid rgba(0,0,0,0.28);background:#fff;border-radius:2px;
-  padding:0 44px 0 16px;font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:16px;color:var(--ink);outline:none;transition:border-color .2s}
+  padding:0 16px 0 46px;font-family:'Myriad Pro',sans-serif;font-weight:300;font-size:16px;color:var(--ink);outline:none;transition:border-color .2s}
 .faq-search input:focus{border-color:var(--navy)}
-.faq-search svg{position:absolute;right:14px;top:14px;width:20px;height:20px;color:#9a9aa2;pointer-events:none}
+.faq-search input::placeholder{color:#71717a}
+.faq-search svg{position:absolute;left:16px;top:14px;width:20px;height:20px;color:#71717a;pointer-events:none}
+/* native clear (X) — same treatment as the Knowledge Center search: thin, grey, black on hover, never browser blue */
+.faq-search input[type="search"]::-webkit-search-cancel-button{
+  -webkit-appearance:none;appearance:none;height:15px;width:15px;margin:0 2px;cursor:pointer;
+  background-color:#71717a;transition:background-color .2s;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 6l12 12M18 6 6 18' stroke='black' stroke-width='2.2' fill='none'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 6l12 12M18 6 6 18' stroke='black' stroke-width='2.2' fill='none'/%3E%3C/svg%3E") center/contain no-repeat}
+.faq-search input[type="search"]::-webkit-search-cancel-button:hover{background-color:var(--ink)}
 
 /* FILTER TABS (Our Team facet style) */
-.faq-filter{display:flex;flex-wrap:wrap;gap:34px;align-items:baseline;margin-top:34px}
-.faq-filter button{font-family:'Myriad Pro',sans-serif;font-size:16px;line-height:1.3;color:#5f5f68;font-weight:400;
-  display:inline-flex;align-items:baseline;gap:8px;padding:0 0 12px;border-bottom:2px solid transparent;
-  transition:color .18s,border-color .18s;white-space:nowrap}
+.faq-filter{display:flex;flex-wrap:wrap;gap:34px;align-items:baseline;margin-top:30px;border-bottom:0.5px solid var(--line)}
+.faq-filter button{position:relative;font-family:'Myriad Pro',sans-serif;font-size:16px;line-height:1.3;color:#5f5f68;font-weight:400;
+  display:inline-flex;align-items:baseline;gap:8px;padding:0 0 7px;
+  transition:color .18s;white-space:nowrap}
+.faq-filter button::after{content:"";position:absolute;left:0;right:0;bottom:-0.5px;height:2px;background:#111;
+  transform:scaleX(0);transition:transform .3s ease}
 .faq-filter button .n{font-size:16px;color:#9a9aa2;font-variant-numeric:tabular-nums;transition:color .18s}
 .faq-filter button:hover{color:#111}
-.faq-filter button.on{color:#111;border-bottom-color:#111}
+.faq-filter button.on{color:#111}
+.faq-filter button.on::after{transform:scaleX(1)}
 .faq-filter button.on .n{color:#111}
 
 /* ACCORDION */
-.faq-body{padding-top:8px;padding-bottom:16px;max-width:1040px;margin-left:0;margin-right:auto}
+.faq-body{padding-top:0;padding-bottom:16px;max-width:1040px;margin-left:0;margin-right:auto}
 .faq-group{margin-top:44px}
 .faq-group h2{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:20px;line-height:28px;letter-spacing:0;
   text-transform:uppercase;color:#111;margin:0 0 4px;display:flex;align-items:baseline;gap:12px}
-.faq-group h2 .idx{color:var(--sand)}
+.faq-group h2 .idx{color:#111}
 .faq-item{border-bottom:0.5px solid var(--line)}
 .faq-q{width:100%;display:flex;align-items:flex-start;justify-content:space-between;gap:24px;text-align:left;
-  padding:22px 0;font-family:'Mesmerize',sans-serif;font-weight:300;font-size:20px;line-height:28px;color:#111;transition:color .2s}
+  padding:22px 0;font-family:'Myriad Pro',sans-serif;font-weight:400;font-size:18px;line-height:26px;color:#111;transition:color .2s}
 .faq-q:hover{color:var(--navy)}
 .faq-q .sign{flex:0 0 auto;width:20px;height:20px;position:relative;margin-top:4px}
 .faq-q .sign::before,.faq-q .sign::after{content:"";position:absolute;background:currentColor;transition:opacity .2s ease, transform .3s ease}
@@ -150,7 +160,7 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
   .faq-head h1{font-size:28px;line-height:40px}
   .faq-head p{font-size:18px;line-height:26px}
   .faq-filter{gap:22px}
-  .faq-q{font-size:18px;line-height:26px}
+  .faq-q{font-size:17px;line-height:25px}
   .faq-a-in{padding-right:0}
   .foot-grid{grid-template-columns:1fr}.foot-col{padding-top:0}
   footer{padding:40px 24px 64px}.back-top{display:none}
@@ -177,11 +187,10 @@ footer{background:var(--paper);padding:40px 40px 80px;color:var(--mute);font-siz
 <main>
   <section class="wrap faq-head">
     <h1 class="split-words" data-split>Frequently asked questions</h1>
-    <p class="reveal d1">The questions our clients ask most often, about buying, selling, owning and servicing a yacht with our team.</p>
 
-    <div class="faq-search reveal d2">
-      <input id="faq-q" type="search" placeholder="Search the questions" autocomplete="off" aria-label="Search the questions"/>
+    <div class="faq-search reveal d1">
       <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="9" cy="9" r="6.25" stroke="currentColor" stroke-width="1.3"/><line x1="13.6" y1="13.6" x2="17.5" y2="17.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+      <input id="faq-q" type="search" placeholder="Search the questions" autocomplete="off" aria-label="Search the questions"/>
     </div>
 
     <div class="faq-filter reveal d3" id="faq-filter" role="tablist" aria-label="Question categories">
