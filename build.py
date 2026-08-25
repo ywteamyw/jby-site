@@ -28,11 +28,11 @@ PAGES = [
     ("listing/",                     "jby-listing/"),
     ("models/riva-112/",             "model-page/"),
     ("brands/axopar/",               "jby-axopar/"),
-    ("news/",                        "jby-knowledge-center/"),
-    ("news/article/",                "jby-knowledge-center/article.html"),
-    ("news/video/",                  "jby-knowledge-center/video.html"),
-    ("news/event/",                  "jby-knowledge-center/event.html"),
-    ("news/search/",                 "jby-knowledge-center/search.html"),
+    ("news/",                        "jby-knowledge-center-v4/"),
+    ("news/article/",                "jby-knowledge-center-v4/article.html"),
+    ("news/video/",                  "jby-knowledge-center-v4/video.html"),
+    ("news/event/",                  "jby-knowledge-center-v4/event.html"),
+    ("news/search/",                 "jby-knowledge-center-v4/search.html"),
     ("privacy-policy/",              "jby-privacy-policy/"),
     ("terms/",                       "jby-terms-and-conditions/"),
     ("statement-of-information/",    "jby-statement-of-information/"),
@@ -40,7 +40,7 @@ PAGES = [
     ("404/",                         "jby-404/"),
 ]
 
-VERSION = "5"   # bump when site.js / site.css change, so pages pick them up immediately
+VERSION = "6"   # bump when site.js / site.css change, so pages pick them up immediately
 CHROME = ('<link rel="stylesheet" href="/jby-site/site.css?v=%s">\n'
           '<script defer src="/jby-site/site.js?v=%s"></script>\n' % (VERSION, VERSION))
 

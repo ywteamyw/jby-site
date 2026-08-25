@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<base href="https://ywteamyw.github.io/jby-knowledge-center/">
+<base href="https://ywteamyw.github.io/jby-knowledge-center-v4/">
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,8 +10,8 @@
 <link rel="icon" href="assets/jby_logo.svg" />
 <link rel="stylesheet" href="assets/fonts.css" />
 <link rel="stylesheet" href="assets/styles.css" />
-<link rel="stylesheet" href="/jby-site/site.css?v=5">
-<script defer src="/jby-site/site.js?v=5"></script>
+<link rel="stylesheet" href="/jby-site/site.css?v=6">
+<script defer src="/jby-site/site.js?v=6"></script>
 </head>
 <body data-kc="events" data-hero="1">
 
@@ -116,8 +116,7 @@
     return '<button class="eg-thumb'+(i===0?' active':'')+'" data-full="assets/img/'+v.img+'" data-vid="'+v.id+'"><img src="assets/img/'+v.img+'" alt="" /></button>';
   }).join("");
   document.getElementById("gal-videos").innerHTML =
-    '<div class="eg-hero"><img src="assets/img/'+vids[0].img+'" alt="" /></div>'
-    + '<button class="eg-play" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button>'
+    '<div class="eg-hero"><img class="eg-poster" src="assets/img/'+vids[0].img+'" alt="" /><iframe class="eg-embed" src="https://www.youtube.com/embed/'+vids[0].id+'?autoplay=1&mute=1&loop=1&playlist='+vids[0].id+'&controls=0&modestbranding=1&rel=0&playsinline=1" title="Video preview" allow="autoplay; encrypted-media" frameborder="0"></iframe></div>'
     + arrows
     + '<div class="eg-word">Videos</div>'
     + '<div class="eg-thumbs">'+vt+'</div>';
