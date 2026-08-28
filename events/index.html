@@ -193,6 +193,28 @@ footer{background:var(--paper);padding:40px 40px;color:var(--mute);font-size:14p
 .foot-locs{display:flex;flex-direction:column;gap:14px;margin:0}
 .foot-locs a{font-family:'Mesmerize',sans-serif;font-weight:300;font-size:16px;line-height:20px;letter-spacing:0;text-transform:uppercase;color:var(--ink,#2f2f39);text-decoration:none;transition:color .2s}
 .foot-locs a:hover{color:#41647b}
+
+/* ====== MOBILE POLISH — events, round 2 (phones only) ====== */
+@media (max-width:600px){
+  /* the hero title reads as two lines, not three */
+  .hero-text h1{font-size:22px;line-height:30px;max-width:19ch}
+  .hero-text p{font-size:16px;line-height:26px}
+
+  /* both hero buttons run the full width of the screen */
+  .hero-cta{flex-direction:column;align-items:stretch;gap:12px;width:100%}
+  .hero-cta .btn-solid,.hero-cta .btn-ghost{width:100%;justify-content:center;text-align:center}
+
+  /* the event card modal: square close button, like every other button on the site */
+  .modal-close{border-radius:2px}
+
+  /* call to action block: heading on one line, button full width */
+  .help{padding:56px 24px}
+  .help h2{font-size:22px;line-height:30px;white-space:nowrap}
+  .help p{font-size:16px;line-height:26px}
+  .help-inner{gap:22px;width:100%}
+  .help-inner .btn-ghost,.help-inner .btn-solid{width:100%;justify-content:center;text-align:center}
+}
+
 </style>
 <link rel="stylesheet" href="/jby-site/site.css?v=6">
 <script defer src="/jby-site/site.js?v=6"></script>
